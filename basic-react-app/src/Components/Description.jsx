@@ -1,9 +1,9 @@
 import "../ComponentsCss/Description.css";
 
-function Description(){
+function Description({description}){
     return (
         <>
-           <p>this is a description 1</p>
+           <p>{description}</p>
         </>
     )
 }

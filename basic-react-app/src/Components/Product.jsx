@@ -2,11 +2,12 @@ import Title from "./Title";
 import Description from "./Description";
 import "../ComponentsCss/Product.css"
 
-function Product(){
+function Product({title,description,price}){
     return (
         <div className="Product">
-          <Title/>
-          <Description/>
+          <Title title={title}/>
+          <Description description={description}/>
+          <h3>Price : {price}</h3>
         </div>
     )
 }

@@ -1,10 +1,9 @@
 import "../ComponentsCss/Title.css"
 
-function Title(){
-    let is = [1,2,3,4];
+function Title({title}){
     return(
         <>
-           <h4>title 1</h4>
+           <h4>{title}</h4>
         </>
     )
 }
