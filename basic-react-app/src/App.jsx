@@ -1,12 +1,12 @@
 import "./App.css";
 
-import ProductTab from "./ProductComponents/ProductTab";
+import MsgBoxes from "./ActivityComp/MsgBoxes";
 
 function App() {
 
   return (
     <>
-      <ProductTab/>
+      <MsgBoxes/>
     </>
   )
 }
