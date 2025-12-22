@@ -2,13 +2,15 @@ import Title from "./Title";
 import Description from "./Description";
 import "../ComponentsCss/Product.css"
 
-function Product({title,description,price=700,features,option}){
+function Product({title,description,price=701,features,option}){
+  let isDiscount = price>700;
+  let styles={backgroundColor: isDiscount?"pink":"lightblue"} 
     return (
-        <div className="Product">
+        <div className="Product" style={styles}>
           <Title title={title}/>
           <Description description={description}/>
           <h3>Price : {price}</h3>
-          {price>700?<p>Discout of 5%</p>:null}
+          {isDiscount && <p>Discount of 5%</p>}
           <ul>{features.map(feature=><li>{feature}</li>)}</ul>
           <p>{option.a}</p>
         </div>
