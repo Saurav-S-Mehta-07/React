@@ -3,8 +3,7 @@ import "../ComponentsCss/Description.css";
 function Description(){
     return (
         <>
-           <p>this is a description</p>
-           <p>returning more tags</p>
+           <p>this is a description 1</p>
         </>
     )
 }

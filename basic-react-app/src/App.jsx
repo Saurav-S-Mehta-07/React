@@ -1,14 +1,12 @@
 import "./App.css";
 
-import Title from "./Components/Title";
-import Description from "./Components/Description";
+import ProductTab from "./Components/ProductTab";
 
 function App() {
 
   return (
     <>
-      <Title/>
-      <Description />
+      <ProductTab/>
     </>
   )
 }

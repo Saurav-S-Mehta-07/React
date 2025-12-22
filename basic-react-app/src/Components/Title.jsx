@@ -1,7 +1,12 @@
 import "../ComponentsCss/Title.css"
 
 function Title(){
-    return <h2>I'm Title</h2>
+    let is = [1,2,3,4];
+    return(
+        <>
+           <h1>title 1</h1>
+        </>
+    )
 }
 
 export default Title;
