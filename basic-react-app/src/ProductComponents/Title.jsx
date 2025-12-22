@@ -1,4 +1,4 @@
-import "../ComponentsCss/Title.css"
+import "../ProductComponentsCss/Title.css"
 
 function Title({title}){
     return(

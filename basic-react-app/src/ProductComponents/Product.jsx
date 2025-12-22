@@ -1,6 +1,6 @@
 import Title from "./Title";
 import Description from "./Description";
-import "../ComponentsCss/Product.css"
+import "../ProductComponentsCss/Product.css"
 
 function Product({title,description,price=701,features,option}){
   let isDiscount = price>700;

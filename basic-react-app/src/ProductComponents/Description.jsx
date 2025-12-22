@@ -1,4 +1,4 @@
-import "../ComponentsCss/Description.css";
+import "../ProductComponentsCss/Description.css";
 
 function Description({description}){
     return (

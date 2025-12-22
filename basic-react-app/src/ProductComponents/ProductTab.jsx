@@ -1,6 +1,6 @@
 
 import Product from "./Product";
-import "../ComponentsCss/ProductTab.css"
+import "../ProductComponentsCss/ProductTab.css"
 
 function ProductTab(){
     return (

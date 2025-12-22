@@ -1,6 +1,6 @@
 import "./App.css";
 
-import ProductTab from "./Components/ProductTab";
+import ProductTab from "./ProductComponents/ProductTab";
 
 function App() {
 
