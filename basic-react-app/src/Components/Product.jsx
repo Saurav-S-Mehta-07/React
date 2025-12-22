@@ -1,13 +1,14 @@
 import Title from "./Title";
 import Description from "./Description";
+import "../ComponentsCss/Product.css"
 
 function Product(){
-    return(
-        <>
-           <Title/>
-           <Description/>
-        </>
+    return (
+        <div className="Product">
+          <Title/>
+          <Description/>
+        </div>
     )
 }
 
-export default Product;
+export default  Product;
