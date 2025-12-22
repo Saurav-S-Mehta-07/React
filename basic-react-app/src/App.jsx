@@ -1,12 +1,12 @@
 import "./App.css";
 
-import MsgBoxes from "./ActivityComp/MsgBoxes";
+import ProductPage from "./AmazonCard/ProductPage";
 
 function App() {
 
   return (
     <>
-      <MsgBoxes/>
+      <ProductPage/>
     </>
   )
 }
