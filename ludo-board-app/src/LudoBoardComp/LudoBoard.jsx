@@ -15,55 +15,51 @@ export default function LudoBoard(){
     }
 
 
-    let [blueMoves, setBlueMoves] = useState(0);
-    let [yellowMoves, setYellowMoves] = useState(0);
-    let [redMoves, setRedMoves] = useState(0);
-    let [greenMoves, setGreenMoves] = useState(0);
-
+    let [state, setState] = useState({red:0, blue:0, yellow : 0, green : 0});
 
     let incBlue = ()=>{
-          setBlueMoves((currMoves)=>{
-            return currMoves+1;
-          })
+        setState((currObj)=>{
+             return {...currObj,blue:state.blue+1};
+        })  
     }
 
     let incRed= ()=>{
-          setRedMoves((currMoves)=>{
-            return currMoves+1;
-          })
+        setState((currObj)=>{
+            return {...currObj,red:state.red+1};
+        })    
     }
 
     let incYellow = ()=>{
-          setYellowMoves((currMoves)=>{
-            return currMoves+1;
-          })
+        setState((currObj)=>{
+            return {...currObj,yellow:state.yellow+1};
+        })  
     }
 
     let incGreen = ()=>{
-          setGreenMoves((currMoves)=>{
-            return currMoves+1;
-          })
+        setState((currObj)=>{
+            return {...currObj,green:state.green+1};
+        })  
     }
 
     return(
         <>
-        <p>Game Begins</p>
+        <p>Game Begins - learning (object states)</p>
         <div style={styles}>
             <div style={playerStyle}>
                 <p>Red Player Moves</p>
-                <button onClick={incRed} style={{backgroundColor:"pink"}}> + {redMoves}</button>
+                <button onClick={incRed} style={{backgroundColor:"pink"}}> + {state.red}</button>
             </div>
             <div style={playerStyle}>
                 <p>blue Player Moves</p>
-                <button onClick={incBlue} style={{backgroundColor:"lightblue"}}> + {blueMoves}</button>
+                <button onClick={incBlue} style={{backgroundColor:"lightblue"}}> + {state.blue}</button>
             </div>
             <div style={playerStyle}>
                 <p>Yellow Player Moves</p>
-                <button onClick={incYellow}style={{backgroundColor:"yellow"}}> + {yellowMoves}</button>
+                <button onClick={incYellow}style={{backgroundColor:"yellow"}}> + {state.yellow}</button>
             </div>
             <div style={playerStyle}>
                 <p>Green Player Moves</p>
-                <button onClick={incGreen} style={{backgroundColor:"lightgreen"}}> + {greenMoves}</button>
+                <button onClick={incGreen} style={{backgroundColor:"lightgreen"}}> + {state.green}</button>
             </div>
         </div>
         </>
