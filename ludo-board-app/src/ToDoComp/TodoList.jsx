@@ -10,7 +10,9 @@ export default function TodoList(){
         padding:"10px"
     }
 
-    let [todos, setTodo] = useState([{task:"sample task", id: uuidv4()}]);
+   
+
+    let [todos, setTodo] = useState([{task:"sample task", id: uuidv4(),isDone:false}]);
     let [newTodo, setNewTodo] = useState("");
 
 
@@ -27,7 +29,7 @@ export default function TodoList(){
         }
 
         setTodo((prevTodo)=>{
-            return ([...prevTodo,{task : newTodo,id : uuidv4()}]);
+            return ([...prevTodo,{task : newTodo,id : uuidv4(),isDone:false}]);
         });
 
         setNewTodo(()=>{
@@ -79,6 +81,20 @@ export default function TodoList(){
     })
    }
 
+   let marksAsDone = (id)=>{
+       setTodo((prevTodo)=>{
+          return prevTodo.map((todo)=>{
+            if(todo.id===id){
+                return{
+                    ...todo,
+                    isDone:true
+                }
+            }
+            return todo;
+          })
+       })
+   }
+
     return(
         <div style={styles}>
             <h1>Todo List</h1>
@@ -96,11 +112,14 @@ export default function TodoList(){
                 {
                   todos.map((todo)=>(
                     <div key={todo.id}>
-                        {todo.task} &nbsp; &nbsp;
+                        <span style={{textDecoration:todo.isDone===true?"line-through":"none"}}>{todo.task}</span>  &nbsp; &nbsp;
                         <button onClick={()=>dltTask(todo.id)}>delete</button>
                         &nbsp;
                         &nbsp;
                         <button onClick={()=>changeInUpperOne(todo.id)}>to Upper</button>
+                        &nbsp;
+                        &nbsp;
+                        <button onClick={()=>marksAsDone(todo.id)}>Marks as Done</button>
                     </div>
                  ))
                 }
