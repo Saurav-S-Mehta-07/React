@@ -1,24 +1,21 @@
 import { useState } from "react";
 import "./LikeBtn.css";
 
-
-
 export default function LikeBtn(){
 
     let [isLike,setIsLike] = useState(true);
+    let [click,setClick] = useState(0);
 
     let handleLike = ()=>{
-        if(isLike==true){
-            setIsLike(false);
-        }else{
-            setIsLike(true);
-        }
+        setIsLike(!isLike);
+        setClick(click+1);
     };
 
     let styles = {color:"red"};
 
     return (
         <>
+        <h1>Click: {click}</h1>
         {
            isLike===false
             ?
