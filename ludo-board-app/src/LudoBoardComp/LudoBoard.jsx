@@ -16,11 +16,18 @@ export default function LudoBoard(){
 
 
     let [state, setState] = useState({red:0, blue:0, yellow : 0, green : 0});
+    let [arr,setArr] = useState(["No moves"]);
 
     let incBlue = ()=>{
         setState((currObj)=>{
              return {...currObj,blue:state.blue+1};
         })  
+
+        //  Array
+        // setArr((prevArr)=>{
+        //   return  [...prevArr,"blue move"];
+        // });
+        // console.log(arr);
     }
 
     let incRed= ()=>{
@@ -44,6 +51,7 @@ export default function LudoBoard(){
     return(
         <>
         <p>Game Begins - learning (object states)</p>
+        <h2>{arr}</h2>
         <div style={styles}>
             <div style={playerStyle}>
                 <p>Red Player Moves</p>
