@@ -5,11 +5,10 @@ import TodoInput from "./TodoInput";
 import TodoItem from "./TodoItem";
 import TodoActions from "./TodoActions";
 import styles from "./Style.js"
+import "./TodoList.css"
 
 export default function TodoList() {
-  let [todos, setTodo] = useState([
-    { task: "sample task", id: uuidv4(), isDone: false }
-  ]);
+  let [todos, setTodo] = useState([]);
   let [newTodo, setNewTodo] = useState("");
 
   const handleInput = (e) => setNewTodo(e.target.value);
@@ -47,8 +46,9 @@ export default function TodoList() {
     setTodo(todos.map((t) => ({ ...t, isDone: true })));
 
   return (
+    <>
+    <h1>Todo List : ({Date().split(" ").slice(0,4).join(" ")})</h1>
     <div style={styles}>
-      <h1>Todo List</h1>
 
       <TodoInput
         newTodo={newTodo}
@@ -60,6 +60,7 @@ export default function TodoList() {
 
       <ul>
         {todos.map((todo) => (
+          <>
           <TodoItem
             key={todo.id}
             todo={todo}
@@ -67,16 +68,21 @@ export default function TodoList() {
             changeInUpperOne={changeInUpperOne}
             marksAsDone={marksAsDone}
           />
+          <hr />
+          </>
         ))}
       </ul>
 
-      <hr />
-
-      <TodoActions
+      {
+        todos.length > 0
+         &&
+        <TodoActions
         toUpperCaseChange={toUpperCaseChange}
         toLowerCaseChange={toLowerCaseChange}
         MarkAllAsDone={MarkAllAsDone}
-      />
+        />
+    }
     </div>
+    </>
   );
 }

@@ -6,7 +6,7 @@ export default function TodoItem({
 }) {
   return (
     <div>
-      <span
+      <span className="task"
         style={{
           textDecoration: todo.isDone ? "line-through" : "none"
         }}
@@ -14,11 +14,11 @@ export default function TodoItem({
         {todo.task}
       </span>
       &nbsp;&nbsp;
-      <button onClick={() => dltTask(todo.id)}>delete</button>
+      <button onClick={() => dltTask(todo.id)} className="btn">delete</button>
       &nbsp;&nbsp;
-      <button onClick={() => changeInUpperOne(todo.id)}>to Upper</button>
+      <button onClick={() => changeInUpperOne(todo.id)} className="btn">to Upper</button>
       &nbsp;&nbsp;
-      <button onClick={() => marksAsDone(todo.id)}>Mark as Done</button>
+      <button onClick={() => marksAsDone(todo.id)} className="btn">Mark as Done</button>
     </div>
   );
 }

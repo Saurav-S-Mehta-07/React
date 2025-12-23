@@ -5,11 +5,11 @@ export default function TodoActions({
 }) {
   return (
     <>
-      <button onClick={toUpperCaseChange}>To UpperCase</button>
+      <button onClick={toUpperCaseChange} className="btn">To UpperCase</button>
       &nbsp;&nbsp;
-      <button onClick={toLowerCaseChange}>To LowerCase</button>
+      <button onClick={toLowerCaseChange} className="btn">To LowerCase</button>
       &nbsp;&nbsp;
-      <button onClick={MarkAllAsDone}>Mark All as Done</button>
+      <button onClick={MarkAllAsDone} className="btn">Mark All as Done</button>
     </>
   );
 }
