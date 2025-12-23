@@ -1,7 +1,12 @@
-import { useState } from "react"
+import { useState } from "react";
+
+function init(){
+    console.log("init was executed");
+    return Math.random();
+}
 
 export default function Counter(){
-    let [count, setCount] = useState(0); //initialization
+    let [count, setCount] = useState(init); //initialization
     let incCount= ()=>{
        setCount((currCount)=>{
             return currCount + 1;
