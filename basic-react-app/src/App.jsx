@@ -1,5 +1,5 @@
 import "./App.css";
-import Button from "./EventsComp/Button";
+import Button from "./EventsComp/Button.jsx";
 
 function App() {
 
