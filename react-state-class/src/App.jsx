@@ -1,12 +1,12 @@
 
 import './App.css'
-import Counter from './MyComponents/Counter'
+import LikeBtn from './MyComponents/LikeBtn'
 
 function App() {
 
   return (
     <>
-      <Counter/>
+      <LikeBtn/>
     </>
   )
 }
