@@ -1,12 +1,11 @@
 import "./App.css";
-
-import ProductPage from "./AmazonCard/ProductPage";
+import Button from "./EventsComp/Button";
 
 function App() {
 
   return (
     <>
-      <ProductPage/>
+      <Button/>
     </>
   )
 }
