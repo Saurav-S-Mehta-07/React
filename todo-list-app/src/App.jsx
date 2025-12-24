@@ -1,7 +1,7 @@
 
 import './App.css'
 
-import TodoList from "./ToDoComp/TodoList.jsx";
+import TodoList from "./ToDoDemo/TodoList.jsx"
 
 function App() {
 
