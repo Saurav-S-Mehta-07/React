@@ -1,6 +1,6 @@
 # React
 
-**React** is a practice repository for learning and experimenting with **React.js**, including core concepts like components, props, state, hooks, and basic UI building.
+This is a practice repository for learning and experimenting with **React.js**, including core concepts like components, props, state, hooks, and basic UI building.
 
 ## 🚀 What’s Inside
 - Functional and class components  
@@ -27,3 +27,4 @@ This repository is **for learning and practice purposes only**.
 
 ## 📄 License
 For educational use only.
+
