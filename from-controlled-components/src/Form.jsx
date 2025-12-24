@@ -9,10 +9,9 @@ export default function Form(){
  let handleInput = (event)=>{
     let fieldName = event.target.name;
     let fieldValue = event.target.value;
-     setFormData((prevData)=>{
-        prevData[fieldName] = fieldValue;
-        return ({...prevData});
-     })
+    setFormData((prevData)=>{
+        return ({...prevData, [fieldName] : fieldValue});
+    })
  }
  
 
