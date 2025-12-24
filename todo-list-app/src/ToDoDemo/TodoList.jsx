@@ -2,7 +2,6 @@ import { useState } from "react"
 import { v4 as uuidv4 } from "uuid";
 import TodoInput from "./TodoInput.jsx";
 import TodoActions from "./TodoActions.jsx";
-import TodoTaskBox from "./TodoTaskBox.jsx";
 import AllTasks from "./AllTasks.jsx";
 import TodoHeading from "./TodoHeading.jsx";
 
