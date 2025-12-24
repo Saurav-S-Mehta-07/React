@@ -4,7 +4,7 @@ import TodoInput from "./TodoInput.jsx";
 import TodoActions from "./TodoActions.jsx";
 import TodoTaskBox from "./TodoTaskBox.jsx";
 import AllTasks from "./AllTasks.jsx";
-import TodoHanding from "./TodoHading.jsx";
+import TodoHeading from "./TodoHeading.jsx";
 
 
 export default function TodoList(){
@@ -61,7 +61,7 @@ export default function TodoList(){
 
     return(
         <div>
-           <TodoHanding/>
+           <TodoHeading/>
            <hr />
            <TodoInput addTask={addTask} addTaskInput={addTaskInput} newTodo={newTodo}/>
            <hr />
